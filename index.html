@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wall Website - Light Theme</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Expletus+Sans&family=Federo&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body>
+  <header class="py-4">
+    <div class="container mx-auto flex justify-between items-center px-8">
+      <h1 class="text-3xl">Wall Website</h1>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="hover:text-blue-600">About</a></li>
+          <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="block md:hidden">
+        <button id="mobileMenuBtn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <div id="mobileMenu" class="md:hidden hidden" style="background-color: #272727;">
+    <ul class="px-4 py-2"><hr>
+      <li><a href="#" class="block py-2 px-4 hover:bg-blue-700">Home</a></li>
+      <li><a href="#" class="block py-2 px-4 hover:bg-blue-700">About</a></li>
+      <li><a href="#" class="block py-2 px-4 hover:bg-blue-700">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="">
+    <main class="py-8 px-8 flex justify-center">
+      <div class="container mx-auto max-w-xl">
+        <div class="grid grid-cols-1 gap-4">
+          <div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/xxxx.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">John Doe</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor nec libero et tempus.</p>
+            <small class="text-white" id="postInfo">Anonymous User - 2 hours ago</small>
+          </div>
+          <div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/s.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">John Doe</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor nec libero et tempus.</p>
+            <small class="text-white" id="postInfo">Anonymous User - 2 hours ago</small>
+          </div>
+          <!-- Repeat note cards as needed -->
+        </div>
+      </div>
+    </main>
+
+    <button id="openModalBtn" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300">Write</button>
+    <style>
+      .off {
+        display: none;
+      }
+    </style>
+    <div id="myModal" class="modal off">
+      <div class="modal-content bg-gray-100 shadow-lg rounded-lg">
+        <div class="modal-header flex justify-between items-center p-4">
+          <h2 class="text-lg font-semibold">Write Your Note</h2>
+          <button id="minimizeModalBtn" class="close-btn">-</button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <input type="text" placeholder="Your Name (Optional)" class="w-full mb-4 border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-400" />
+            <textarea placeholder="Write your note" rows="4" class="w-full mb-4 border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-400"></textarea>
+            <button type="submit" style="background-color: #2563eb" class="text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-all duration-300">Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer style="background-color: #161616" class="text-white py-4">
+      <div class="container mx-auto flex justify-center items-center">
+        <p class="text-sm">&copy; 2024 Wall Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
