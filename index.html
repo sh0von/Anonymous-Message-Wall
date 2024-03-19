@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Expletus+Sans&family=Federo&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
-<body>
+<body class="h-size" style="height: 100vh;">
   <header class="py-4">
     <div class="container mx-auto flex justify-between items-center px-8">
       <h1 class="text-3xl">Wall Website</h1>
@@ -43,29 +43,56 @@
     <div class="container mx-auto max-w-xl">
       <div class="grid grid-cols-1 gap-4">
         <div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-          <div class="flex items-center mb-2">
-            <img src="https://api.multiavatar.com/hi.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
-            <span class="font-semibold text-white" id="username">Anonymous</span>
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/hi.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">Anonymous</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Believe in yourself. You are capable of amazing things! 💪</p>
+            <small class="text-white" id="postInfo">Anonymous User - Just now</small>
+          </div><div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/hi.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">Anonymous</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Believe in yourself. You are capable of amazing things! 💪</p>
+            <small class="text-white" id="postInfo">Anonymous User - Just now</small>
+          </div><div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/hi.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">Anonymous</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Believe in yourself. You are capable of amazing things! 💪</p>
+            <small class="text-white" id="postInfo">Anonymous User - Just now</small>
+          </div><div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/hi.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">Anonymous</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Believe in yourself. You are capable of amazing things! 💪</p>
+            <small class="text-white" id="postInfo">Anonymous User - Just now</small>
           </div>
-          <hr class="py-2" />
-          <p class="text-white mb-4" id="userMessage">Believe in yourself. You are capable of amazing things! 💪</p>
-          <small class="text-white" id="postInfo">Anonymous User - Just now</small>
-        </div>
-  
-        <div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-          <div class="flex items-center mb-2">
-            <img src="https://api.multiavatar.com/aaa.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
-            <span class="font-semibold text-white" id="username">Anonymous</span>
+          
+          <div class="note-card w-full pixel rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+            <div class="flex items-center mb-2">
+              <img src="https://api.multiavatar.com/hi.png" class="w-8 h-8 rounded-full mr-2" alt="Avatar" />
+              <span class="font-semibold text-white" id="username">Anonymous</span>
+            </div>
+            <hr class="py-2" />
+            <p class="text-white mb-4" id="userMessage">Believe in yourself. You are capable of amazing things! 💪</p>
+            <small class="text-white" id="postInfo">Anonymous User - Just now</small>
           </div>
-          <hr class="py-2" />
-          <p class="text-white mb-4" id="userMessage">Every day is a new beginning. Start it with a positive mindset! 🌞</p>
-          <small class="text-white" id="postInfo">Anonymous User - 1 minute ago</small>
-        </div>
       </div>
     </div>
   </main>
   
-    <button id="openModalBtn" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300">Write</button>
+    <button id="openModalBtn" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-800 text-white my-8 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300">
+        Write
+    </button>
+    
     <style>
       .off {
         display: none;
@@ -87,11 +114,21 @@
       </div>
     </div>
 
-    <footer style="background-color: #161616" class="text-white py-4">
-      <div class="container mx-auto flex justify-center items-center">
-        <p class="text-sm">&copy; 2024 Wall Website. All rights reserved.</p>
-      </div>
-    </footer>
+    <style>
+        .footer {
+            background-color: #161616;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-top: 100px;
+          }
+          
+    </style>      
+    <footer style="background-color: #161616;" class="footer text-white py-4">
+        <div class="container mx-auto flex justify-center items-center h-full">
+          <p class="text-sm">&copy; 2024 Wall Website. All rights reserved.</p>
+        </div>
+      </footer>
 
     <script src="script.js"></script>
   </div>

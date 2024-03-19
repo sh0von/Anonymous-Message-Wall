@@ -152,7 +152,8 @@ body.modal-open {
 
 /* Improved note card design */
 .note-card {
-    margin-top: 30px;
+    margin-top: 1px;
+    margin-bottom: 40px;
     background-color: #100f11; /* Dark background color */
     color: #ffffff; /* Light text color */
     transition: border-color 0.3s ease;
